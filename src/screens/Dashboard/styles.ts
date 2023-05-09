@@ -19,9 +19,7 @@ export const Header = styled.View`
   height: ${RFPercentage(42)}px;
 
   background-color: ${({ theme }) => theme.colors.primary};
-
   justify-content: center;
-  align-items: center;
   flex-direction: row;
 `;
 
@@ -30,14 +28,12 @@ export const UserContainer = styled.View`
   padding: 0 24px;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
 
   margin-top: ${getStatusBarHeight() + RFValue(28)}px;
 `;
 
 export const UserInfo = styled.View`
   flex-direction: row;
-  align-items: center;
 `;
 
 export const Photo = styled.Image`
