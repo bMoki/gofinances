@@ -13,6 +13,7 @@ import {
   Poppins_700Bold,
 } from "@expo-google-fonts/poppins";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { StatusBar } from "react-native";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -34,6 +35,11 @@ export default function App() {
         }}
       >
         <NavigationContainer>
+          <StatusBar
+            barStyle="light-content"
+            translucent
+            backgroundColor="transparent"
+          />
           <AppRoutes />
         </NavigationContainer>
       </GestureHandlerRootView>
