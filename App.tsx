@@ -14,6 +14,8 @@ import {
 } from "@expo-google-fonts/poppins";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { StatusBar } from "react-native";
+import { AuthProvider } from "./src/hooks/auth";
+import { SignIn } from "./src/screens/SignIn";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -40,7 +42,9 @@ export default function App() {
             translucent
             backgroundColor="transparent"
           />
-          <AppRoutes />
+          <AuthProvider>
+            <SignIn />
+          </AuthProvider>
         </NavigationContainer>
       </GestureHandlerRootView>
     </ThemeProvider>
